@@ -1,0 +1,532 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="GB2VxUl5VdhM5rsl5IbjQg" Version="0.55">
+  <p:Info Authors="vvvv group">
+    <p:LicenseUrl>https://www.gnu.org/licenses/lgpl.html</p:LicenseUrl>
+    <p:ProjectUrl>http://vvvv.org/</p:ProjectUrl>
+  </p:Info>
+  <NugetDependency Id="RKFCmk1Lg5EP3I4IQegLTw" Location="VL.CoreLib" Version="0.35.21" />
+  <NugetDependency Id="U2JwHqMJLyGLDs97lM6eZ6" Location="VL.CoreLib.VVVV" Version="0.35.21" />
+  <NugetDependency Id="Q18ZLENm9gzPhBnFnztPMP" Location="VL.Core" Version="0.35.21" />
+  <Patch Id="Th8hpfHvBF4Lk6VOwDCc9D">
+    <Canvas Id="NtZT52Xp5qNOXK0fF2H7kv" DefaultCategory="VVVV.OpenCVSharp" BordersChecked="false">
+      <!--
+
+    ************************ OpenCVSharp ************************
+
+-->
+      <Node Name="OpenCVSharp" Bounds="153,200" Id="TSttkfeJHQSN5gkEF54G9o">
+        <p:NodeReference>
+          <Choice Kind="ContainerDefinition" Name="Patch" />
+          <FullNameCategoryReference ID="Primitive" />
+        </p:NodeReference>
+        <p:Info Summary="Basic stateful template with one in/out" Tags="vl" />
+        <Patch Id="CzjSvRY5dvXQDxmAOA8mZj">
+          <Patch Id="ESJZDDS0I02LAWDOx9RJVV" Name="Create" ParticipatingElements="EaZokLeJN1COVMK9Uvz1Q9,FjiI6qLyCP9LLvqsl2LRRU" />
+          <Patch Id="OkqGvJfa3PDOppp4PFQghD" Name="Update" ParticipatingElements="SRpp4VEzNfJOVQT4TWQmNQ">
+            <Pin Id="C2VoBq1DvBQPlZy2aMLQGU" Name="Calc" Kind="InputPin" />
+          </Patch>
+          <Canvas Id="C4yd3S6BFv9NWqJ2WO3OFi">
+            <Node Name="If2" Bounds="380,157,363,1026" Id="DZFCBPTZ64EO1UU9TLB9LS">
+              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin">
+                <Choice Kind="If" Name="If" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <Pin Id="LbzFVDW7LqCLjMCaIXuNbX" Name="Condition" Kind="InputPin" />
+              <Patch Id="NcVZ0n6acN6Omic2cxhBG7" Name="Then" ManuallySortedPins="true">
+                <Node Name="ForEach2" Bounds="457,613,274,511" Id="RbEDX4YTpaoOVcFTF8N4sq">
+                  <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="Builtin">
+                    <Choice Kind="ForEachLoop" Name="ForEach" />
+                    <FullNameCategoryReference ID="Primitive" />
+                  </p:NodeReference>
+                  <Pin Id="ECTtbUJva97QAaovxqycN4" Name="Break" Kind="OutputPin" />
+                  <Patch Id="Kl8ZsTABKEXPGbTAQUykrr" ManuallySortedPins="true">
+                    <Patch Id="SbgL79RFUzOQSAD0xkxlOe" Name="Create" ManuallySortedPins="true" />
+                    <Patch Id="Oteyj4B6sKrNOF4WeGiOm8" Name="Update" ManuallySortedPins="true" />
+                    <Patch Id="E4SJLLqXnH3QHa5Ixyj2AZ" Name="Destroy" ManuallySortedPins="true" />
+                    <Node Bounds="469,1015,145,22" Id="IZ0YEZ5MwOXMOm11prWdwJ">
+                      <p:NodeReference LastCategoryFullName="OpenCvSharp.CPlusPlus.Mat" LastSymbolSource="OpenCvSharp.CPlusPlus.dll">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <Choice Kind="OperationCallFlag" Name="Line" />
+                        <CategoryReference Kind="AssemblyCategory" Name="Mat" NeedsToBeDirectParent="true" />
+                        <AssemblyReference ID="OpenCvSharp.CPlusPlus" />
+                        <PinReference Kind="InputPin" Name="Color">
+                          <p:DataTypeReference p:Type="TypeReference">
+                            <Choice Kind="TypeFlag" Name="Scalar" />
+                            <AssemblyReference ID="OpenCvSharp.CPlusPlus" />
+                            <FullNameCategoryReference ID="OpenCvSharp.CPlusPlus" />
+                          </p:DataTypeReference>
+                        </PinReference>
+                      </p:NodeReference>
+                      <Pin Id="UQKFGMuKKphPtg0yqymLew" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="VdPwi6I50CJOaDkA5T9Obd" Name="Pt 1" Kind="InputPin" />
+                      <Pin Id="UEMmjLdn3nINwWd0aAou0H" Name="Pt 2" Kind="InputPin" />
+                      <Pin Id="IxeCBYqJZukMnXddpuP4BR" Name="Color" Kind="InputPin" />
+                      <Pin Id="QADJd5DoY3CNkrd5AGf53k" Name="Thickness" Kind="InputPin" />
+                      <Pin Id="UFFTF6ZJM7HM2oalcoq8RC" Name="Line Type" Kind="InputPin" />
+                      <Pin Id="QkI8O76wia3Pbiwh71YDdA" Name="Shift" Kind="InputPin" />
+                      <Pin Id="Fx1LIlNzvakP7HRddHn0Hf" Name="Output" Kind="StateOutputPin" />
+                    </Node>
+                    <Node Bounds="608,655,85,22" Id="MSmSbmfHmMVOts4tOsXVey">
+                      <p:NodeReference LastCategoryFullName="OpenCvSharp.CvLineSegmentPolar" LastSymbolSource="OpenCvSharp.dll">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="AssemblyCategory" Name="CvLineSegmentPolar" />
+                        <AssemblyReference ID="OpenCvSharp" />
+                        <Choice Kind="OperationCallFlag" Name="ToSegmentPoint" />
+                      </p:NodeReference>
+                      <Pin Id="DVsFZPZb3HhOCtJb0HA20L" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="O8R0rKYH5bRO0MDHoVI10U" Name="Output" Kind="StateOutputPin" />
+                      <Pin Id="ESw59JsBDQGM6isAxfyjQe" Name="Result" Kind="OutputPin" />
+                      <Pin Id="QaVNDR8g7nINJvZ3QSnQaY" Name="Scale" Kind="InputPin" />
+                    </Node>
+                    <Node Bounds="500,757,82,22" Id="MuB55vkToAnMkvOfTEBwXS">
+                      <p:NodeReference LastCategoryFullName="OpenCvSharp.CvLineSegmentPoint" LastSymbolSource="OpenCvSharp.dll">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="AssemblyCategory" Name="CvLineSegmentPoint" />
+                        <Choice Kind="OperationCallFlag" Name="P1" />
+                        <AssemblyReference ID="OpenCvSharp" />
+                      </p:NodeReference>
+                      <Pin Id="RTMFaa51xkcMG5a6U1qqfv" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="JQPOOSrPxlcMOqkfSdmNhk" Name="Output" Kind="StateOutputPin" />
+                      <Pin Id="RzZSrhpSiZWM9EgBvv9vLn" Name="P1" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="540,913,26,13" Id="UEISPIhmrABOpvCbBE1HDL">
+                      <p:NodeReference LastCategoryFullName="OpenCvSharp.CPlusPlus.Scalar" LastSymbolSource="OpenCvSharp.CPlusPlus.dll">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="AssemblyCategory" Name="Scalar" />
+                        <Choice Kind="OperationCallFlag" Name="Red" />
+                        <AssemblyReference ID="OpenCvSharp.CPlusPlus" />
+                      </p:NodeReference>
+                      <Pin Id="U60Uv0QsWMgN4rc8Tnp89F" Name="Red" Kind="OutputPin" />
+                    </Node>
+                    <Pad Id="CKatUdLv9h6LtaL6qR5Gj8" Comment="Thickness" Bounds="564,949,18,19" ShowValueBox="true" isIOBox="true" Value="8">
+                      <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                        <Choice Kind="TypeFlag" Name="Integer32" />
+                        <CategoryReference Kind="Category" Name="Primitive" />
+                      </p:TypeAnnotation>
+                    </Pad>
+                    <Pad Id="PqTbxeOCogXMME1PhEVbw7" Comment="Line Type" Bounds="588,971,65,19" ShowValueBox="true" isIOBox="true" Value="&quot;AntiAlias&quot;">
+                      <p:TypeAnnotation LastCategoryFullName="OpenCvSharp" LastSymbolSource="OpenCvSharp.dll">
+                        <Choice Kind="TypeFlag" Name="LineType" />
+                        <AssemblyReference ID="OpenCvSharp" />
+                        <FullNameCategoryReference ID="OpenCvSharp" />
+                      </p:TypeAnnotation>
+                    </Pad>
+                    <Pad Id="MasfUgtiGlBQFqiEmEqX85" Comment="Shift" Bounds="612,997,18,19" ShowValueBox="true" isIOBox="true" Value="0">
+                      <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                        <Choice Kind="TypeFlag" Name="Integer32" />
+                        <CategoryReference Kind="Category" Name="Primitive" />
+                      </p:TypeAnnotation>
+                    </Pad>
+                    <Node Bounds="527,804,36,22" Id="ICAttnIJgsLM2ZNuUqKWkb">
+                      <p:NodeReference LastCategoryFullName="OpenCvSharp.CvPoint" LastSymbolSource="OpenCvSharp.dll">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="AssemblyCategory" Name="CvPoint" />
+                        <Choice Kind="OperationCallFlag" Name="X" />
+                        <AssemblyReference ID="OpenCvSharp" />
+                      </p:NodeReference>
+                      <Pin Id="VROaeGXQw5QN420ap21Jvk" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="P4pR5RciSPTN2mCtdx47jE" Name="Output" Kind="StateOutputPin" />
+                      <Pin Id="QNwDEEvmYhkN3RIWwIeVBT" Name="X" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="576,804,36,22" Id="Ek1cnPn2oQsNMANBNofISS">
+                      <p:NodeReference LastCategoryFullName="OpenCvSharp.CvPoint" LastSymbolSource="OpenCvSharp.dll">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="AssemblyCategory" Name="CvPoint" />
+                        <AssemblyReference ID="OpenCvSharp" />
+                        <Choice Kind="OperationCallFlag" Name="Y" />
+                      </p:NodeReference>
+                      <Pin Id="AVyaQyxd1CMOg8uPmsSO47" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="ER6gtaShQYdNloHJXODUOY" Name="Output" Kind="StateOutputPin" />
+                      <Pin Id="G6B04NifVWYNRmUza1RwA5" Name="Y" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="562,848,39,22" Id="A1PwZnMB1FoQDsgj2EidWM">
+                      <p:NodeReference LastCategoryFullName="OpenCvSharp.CPlusPlus.Point" LastSymbolSource="OpenCvSharp.CPlusPlus.dll">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="AssemblyCategory" Name="Point" />
+                        <Choice Kind="OperationCallFlag" Name="Create" />
+                        <AssemblyReference ID="OpenCvSharp.CPlusPlus" />
+                        <PinReference Kind="InputPin" Name="X">
+                          <p:DataTypeReference p:Type="TypeReference">
+                            <Choice Kind="TypeFlag" Name="Int32" />
+                            <AssemblyReference ID="mscorlib" />
+                            <FullNameCategoryReference ID="System" />
+                          </p:DataTypeReference>
+                        </PinReference>
+                      </p:NodeReference>
+                      <Pin Id="P12NKAP35dhMiVkSeXPwXX" Name="X" Kind="InputPin" />
+                      <Pin Id="VeQsDdmmHcSNek3kbbQyrk" Name="Y" Kind="InputPin" />
+                      <Pin Id="HQ5YwZGbanHMCGzT0CypLi" Name="Output" Kind="StateOutputPin" />
+                    </Node>
+                    <Node Bounds="607,757,82,22" Id="Ackf35hWQvmOTFDQrNogJ9">
+                      <p:NodeReference LastCategoryFullName="OpenCvSharp.CvLineSegmentPoint" LastSymbolSource="OpenCvSharp.dll">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="AssemblyCategory" Name="CvLineSegmentPoint" />
+                        <AssemblyReference ID="OpenCvSharp" />
+                        <Choice Kind="OperationCallFlag" Name="P2" />
+                      </p:NodeReference>
+                      <Pin Id="ItL3OSwB3brOJlGsPkMSRE" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="GlyObfSmJR1ONHQaCFlSXs" Name="Output" Kind="StateOutputPin" />
+                      <Pin Id="BiodLKFX2w7NmoB7Aqnxip" Name="P2" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="634,804,36,22" Id="TaW4zgBsL0MPzwA2MsqvDk">
+                      <p:NodeReference LastCategoryFullName="OpenCvSharp.CvPoint" LastSymbolSource="OpenCvSharp.dll">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="AssemblyCategory" Name="CvPoint" />
+                        <Choice Kind="OperationCallFlag" Name="X" />
+                        <AssemblyReference ID="OpenCvSharp" />
+                      </p:NodeReference>
+                      <Pin Id="VO4BCtQcNOzOOIJ8wmVbC7" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="FZqRdkam2sVNejyGY4xj3g" Name="Output" Kind="StateOutputPin" />
+                      <Pin Id="LeXP9SxfAsKOUptECp8RgE" Name="X" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="683,804,36,22" Id="Ey3nMuy8QpgMRoWQi71C7S">
+                      <p:NodeReference LastCategoryFullName="OpenCvSharp.CvPoint" LastSymbolSource="OpenCvSharp.dll">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="AssemblyCategory" Name="CvPoint" />
+                        <AssemblyReference ID="OpenCvSharp" />
+                        <Choice Kind="OperationCallFlag" Name="Y" />
+                      </p:NodeReference>
+                      <Pin Id="KTjwfxBgIB9Nf06NeoXwXh" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="D93o9Y7QK0cLDR0ydbYcDt" Name="Output" Kind="StateOutputPin" />
+                      <Pin Id="OUx0Os8Ee6iLMwytLdF5RX" Name="Y" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="669,859,39,22" Id="BZtzlLAmjCOOUa842IwnsH">
+                      <p:NodeReference LastCategoryFullName="OpenCvSharp.CPlusPlus.Point" LastSymbolSource="OpenCvSharp.CPlusPlus.dll">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="AssemblyCategory" Name="Point" />
+                        <Choice Kind="OperationCallFlag" Name="Create" />
+                        <AssemblyReference ID="OpenCvSharp.CPlusPlus" />
+                        <PinReference Kind="InputPin" Name="X">
+                          <p:DataTypeReference p:Type="TypeReference">
+                            <Choice Kind="TypeFlag" Name="Int32" />
+                            <AssemblyReference ID="mscorlib" />
+                            <FullNameCategoryReference ID="System" />
+                          </p:DataTypeReference>
+                        </PinReference>
+                      </p:NodeReference>
+                      <Pin Id="AIVkD93XNFAMYaJ28HBhBn" Name="X" Kind="InputPin" />
+                      <Pin Id="GvVe8pkmhgXLehHGjXsdCU" Name="Y" Kind="InputPin" />
+                      <Pin Id="DjpHZ35KMg4Pkvsts5rYce" Name="Output" Kind="StateOutputPin" />
+                    </Node>
+                    <ControlPoint Id="I36mdwrL5T4OSfkIHrmZeg" Bounds="495,887" />
+                    <ControlPoint Id="Ss2GGwb9VwEMW5kHCUn0ps" Bounds="518,901" />
+                  </Patch>
+                  <ControlPoint Id="H9NeAvgBcDDL9eN82yo3HX" Bounds="610,619" Alignment="Top" />
+                  <ControlPoint Id="EAS2yPVjpkMQKW5Bb2I0q0" Bounds="476,619" Alignment="Top" />
+                  <ControlPoint Id="Qwi47q5EqPOOVu2blvndhh" Bounds="473,1118" Alignment="Bottom" />
+                </Node>
+                <Node Bounds="473,537,145,22" Id="TPgbFWZsHYxLNaWOJ8RMTt">
+                  <p:NodeReference LastCategoryFullName="OpenCvSharp.CPlusPlus.Mat" LastSymbolSource="OpenCvSharp.CPlusPlus.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="OpenCvSharp" />
+                    <Choice Kind="OperationCallFlag" Name="HoughLines" />
+                    <CategoryReference Kind="AssemblyCategory" Name="Mat" NeedsToBeDirectParent="true" />
+                    <AssemblyReference ID="OpenCvSharp.CPlusPlus" />
+                  </p:NodeReference>
+                  <Pin Id="Q3bd7LAVyNpMXSynA5atT2" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="I3a9pkoguPqL2Q77GCDz7d" Name="Rho" Kind="InputPin" />
+                  <Pin Id="IuugMJrV3jIMYQ6tzGmvT5" Name="Theta" Kind="InputPin" />
+                  <Pin Id="Ht0dimGiFn4Magal3BdVTB" Name="Threshold" Kind="InputPin" />
+                  <Pin Id="Bv3ZAo1uhJ8Nxqj9HeknIX" Name="Srn" Kind="InputPin" />
+                  <Pin Id="Ci8zz6sUo76NeOylZ76my0" Name="Stn" Kind="InputPin" />
+                  <Pin Id="N2p3hWriVy1Mp1xHPxhedN" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="TFhT1nizF00NB25j9ZKbi9" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Pad Id="T2j3VTKDjDhPRKuRZ5PAQ7" Comment="Rho" Bounds="500,358,33,19" ShowValueBox="true" isIOBox="true" Value="1.0">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                    <Choice Kind="TypeFlag" Name="Float64" />
+                  </p:TypeAnnotation>
+                </Pad>
+                <Pad Id="PrUH1ALLPpEOWQYfG6NU4x" Comment="Theta" Bounds="530,389,33,19" ShowValueBox="true" isIOBox="true" Value="0.0">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                    <Choice Kind="TypeFlag" Name="Float64" />
+                  </p:TypeAnnotation>
+                </Pad>
+                <Pad Id="ODG0Kvwg9TSMqnyhOW09Qn" Comment="Threshold" Bounds="560,430,24,19" ShowValueBox="true" isIOBox="true" Value="50">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                    <Choice Kind="TypeFlag" Name="Integer32" />
+                    <CategoryReference Kind="Category" Name="Primitive" />
+                  </p:TypeAnnotation>
+                </Pad>
+                <Pad Id="HYGY1chvVTEPf9W8mYRaNx" Comment="Srn" Bounds="587,463,33,19" ShowValueBox="true" isIOBox="true" Value="0.0">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                    <Choice Kind="TypeFlag" Name="Float64" />
+                  </p:TypeAnnotation>
+                </Pad>
+                <Pad Id="Teda6AUNcB8LiCga1lBeIk" Comment="Stn" Bounds="616,501,33,19" ShowValueBox="true" isIOBox="true" Value="0.0">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                    <Choice Kind="TypeFlag" Name="Float64" />
+                  </p:TypeAnnotation>
+                </Pad>
+                <Node Bounds="608,290,33,13" Id="AB0BF4wPM9EN1sXO8JNvwT">
+                  <p:NodeReference LastCategoryFullName="Primitive.Float64" LastSymbolSource="VL.CoreLib.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="PI" />
+                    <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="FzzHNoTDtPTPtmndhJNby3" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="610,341,30,13" Id="L9LCrx42nqQL7WL9HOi3ej">
+                  <p:NodeReference LastCategoryFullName="Primitive.Float64" LastSymbolSource="VL.CoreLib.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="/" />
+                    <CategoryReference Kind="Category" Name="Adaptive" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="ChXI3BxbkkqNUUVzJoCFod" Name="Input" Kind="InputPin" />
+                  <Pin Id="AC5A2b3deNGMAXZRWz91Vh" Name="Input 2" Kind="InputPin" />
+                  <Pin Id="JvdIJwWQO5ePuHvodkWhbK" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Pad Id="R6VzumxOgQOOR3vSxrV62v" Comment="" Bounds="637,321,45,19" ShowValueBox="true" isIOBox="true" Value="100.0">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                    <Choice Kind="TypeFlag" Name="Float64" />
+                  </p:TypeAnnotation>
+                </Pad>
+                <Pad Id="JQJRgInND4fMKcW1Jov8R5" Bounds="585,486,27,22" ShowValueBox="true" isIOBox="true" Value="&quot;50&quot;">
+                  <p:ValueBoxSettings>
+                    <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+                    <p:fontsize p:Type="Int32">9</p:fontsize>
+                  </p:ValueBoxSettings>
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                    <Choice Kind="TypeFlag" Name="String" />
+                  </p:TypeAnnotation>
+                </Pad>
+                <Pad Id="VRsT5y46rBrLVjh1MbH9iD" Bounds="621,522,24,22" ShowValueBox="true" isIOBox="true" Value="&quot;10&quot;">
+                  <p:ValueBoxSettings>
+                    <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+                    <p:fontsize p:Type="Int32">9</p:fontsize>
+                  </p:ValueBoxSettings>
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                    <Choice Kind="TypeFlag" Name="String" />
+                  </p:TypeAnnotation>
+                </Pad>
+                <Node Bounds="392,295,85,22" Id="M0LopL9C1T2OIt1kuXE6y4">
+                  <p:NodeReference LastCategoryFullName="OpenCvSharp.CPlusPlus.Mat" LastSymbolSource="OpenCvSharp.CPlusPlus.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="Canny" />
+                    <CategoryReference Kind="AssemblyCategory" Name="Mat" NeedsToBeDirectParent="true" />
+                    <AssemblyReference ID="OpenCvSharp.CPlusPlus" />
+                  </p:NodeReference>
+                  <Pin Id="N5Ntb0H0TJ4MN9vE2t7x20" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="OBSShXiMeTSNxWuI7tBcRj" Name="Threshold 1" Kind="InputPin" />
+                  <Pin Id="N8hqVEUH1TWL1OfKNgXcaU" Name="Threshold 2" Kind="InputPin" />
+                  <Pin Id="Sw6K3pge3oKPZ791htLnQe" Name="Aperture Size" Kind="InputPin" />
+                  <Pin Id="Nqbgtq75HmLQdDkdA3Bnx9" Name="L2gradient" Kind="InputPin" />
+                  <Pin Id="EbygbaFtmeIO9bPVB0mP7E" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="Tur9XZ6gNmhL8KwJyyBDMZ" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Pad Id="ImgD3tCPZjjNEyaTZUXgD0" Comment="Threshold 1" Bounds="412,187,39,19" ShowValueBox="true" isIOBox="true" Value="50.0">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                    <Choice Kind="TypeFlag" Name="Float64" />
+                  </p:TypeAnnotation>
+                </Pad>
+                <Pad Id="TEXeyLHwRIKOE77wfXf0mr" Comment="Threshold 2" Bounds="429,219,45,19" ShowValueBox="true" isIOBox="true" Value="200.0">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                    <Choice Kind="TypeFlag" Name="Float64" />
+                  </p:TypeAnnotation>
+                </Pad>
+                <Pad Id="UjjpFQ5fde8NNKkP0NBztH" Comment="Aperture Size" Bounds="454,250,18,19" ShowValueBox="true" isIOBox="true" Value="3">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                    <Choice Kind="TypeFlag" Name="Integer32" />
+                    <CategoryReference Kind="Category" Name="Primitive" />
+                  </p:TypeAnnotation>
+                </Pad>
+                <Pad Id="UH0GKQWBAekOZlNRYy27Md" Comment="L2gradient" Bounds="474,279,40,19" ShowValueBox="true" isIOBox="true" Value="false">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                    <Choice Kind="TypeFlag" Name="Boolean" />
+                  </p:TypeAnnotation>
+                </Pad>
+              </Patch>
+              <ControlPoint Id="Kkz4xx7TnzWP1jfU6WCvcG" Bounds="471,1177" Alignment="Bottom" />
+              <ControlPoint Id="CKCEeUZ5yHJQbCoV7LeeFF" Bounds="396,163" Alignment="Top" />
+            </Node>
+            <Pad Id="AoQHzDBbEhhO7ZzVu2eJPU" Comment="" Bounds="-44,510,70,69" ShowValueBox="true" isIOBox="true" Value="false">
+              <p:ValueBoxSettings>
+                <p:buttonmode p:Assembly="VL.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Press</p:buttonmode>
+              </p:ValueBoxSettings>
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Node Bounds="-46,559,329,13" Id="SRpp4VEzNfJOVQT4TWQmNQ">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="VL.CoreLib.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="OR" />
+              </p:NodeReference>
+              <Pin Id="CSH0KkkIewrMbLbXJtIONA" Name="Input" Kind="InputPin" />
+              <Pin Id="B2G7RMndaAQOOGz14GdhGn" Name="Input 2" Kind="InputPin" />
+              <Pin Id="HU58jmT19DKNeE2dQuz5Ag" Name="Output" Kind="OutputPin" />
+              <Pin Id="SGZvnsAnr6IPwQXenvuLhf" Name="Input 3" Kind="InputPin" />
+              <Pin Id="Gyh3HA1b9jpLbxChLsa7i9" Name="Input 4" Kind="InputPin" />
+            </Node>
+            <Pad Id="CJHN9UBTPWHPL6xvjuNlci" Comment="" Bounds="65,508,70,69" ShowValueBox="true" isIOBox="true" Value="false">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="Ce2fr2n83efPFTRkbUoKJI" Comment="" Bounds="173,507,70,69" ShowValueBox="true" isIOBox="true" Value="false">
+              <p:ValueBoxSettings>
+                <p:buttonmode p:Assembly="VL.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+              </p:ValueBoxSettings>
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="SFpgmdHw5npP6ViydNnMtT" Comment="Flags" Bounds="150,1067,198,19" ShowValueBox="true" isIOBox="true" Value="&quot;KeepRatio, None, Fullscreen&quot;">
+              <p:TypeAnnotation LastCategoryFullName="OpenCvSharp" LastSymbolSource="OpenCvSharp.dll">
+                <Choice Kind="TypeFlag" Name="WindowMode" />
+                <AssemblyReference ID="OpenCvSharp" />
+                <FullNameCategoryReference ID="OpenCvSharp" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="JGBcubdYvBXLCNhSJgtWe7" Comment="Name" Bounds="289,1178,44,19" ShowValueBox="true" isIOBox="true" Value="&quot;opencv&quot;">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Node Bounds="393,-49,39,22" Id="EaZokLeJN1COVMK9Uvz1Q9">
+              <p:NodeReference LastCategoryFullName="OpenCvSharp.CPlusPlus.Mat" LastSymbolSource="OpenCvSharp.CPlusPlus.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="Create" />
+                <PinReference Kind="InputPin" Name="File Name" />
+                <CategoryReference Kind="AssemblyCategory" Name="Mat" NeedsToBeDirectParent="true" />
+                <AssemblyReference ID="OpenCvSharp.CPlusPlus" />
+              </p:NodeReference>
+              <Pin Id="PFRE3SLBRUCOp11JhmTKG4" Name="File Name" Kind="InputPin" />
+              <Pin Id="VnvyHEVgvlHMSzw70gDbEJ" Name="Flags" Kind="InputPin" />
+              <Pin Id="EhP6tRJBSBfL40nprSCQyW" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <Pad Id="AKcIru3GwNdLA5APnQhWvE" Comment="File Path" Bounds="395,-124,279,19" ShowValueBox="true" isIOBox="true" Value="{&quot;_path&quot;:&quot;C:\\vvvv\\VL.OpenCVSharp\\small.jpg&quot;}">
+              <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="VL.CoreLib.vl">
+                <Choice Kind="TypeFlag" Name="Path" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Node Bounds="394,-86,65,13" Id="GdTkTt58GaUPFZX8cg6DGU">
+              <p:NodeReference LastCategoryFullName="IO.Path" LastSymbolSource="VL.CoreLib.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="ToString" />
+                <CategoryReference Kind="RecordType" Name="Path" NeedsToBeDirectParent="true">
+                  <p:OuterCategoryReference Kind="Category" Name="IO" NeedsToBeDirectParent="true" />
+                </CategoryReference>
+              </p:NodeReference>
+              <Pin Id="AglwDJyBqYWM1cGy27GJMK" Name="Input" Kind="InputPin" />
+              <Pin Id="GTzxwWIs9F2QdRQYqf8IYO" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Pad Id="BCQy9xPBcYHQceLBIrHYJR" Comment="Flags" Bounds="505,-64,76,19" ShowValueBox="true" isIOBox="true" Value="&quot;GrayScale&quot;">
+              <p:TypeAnnotation LastCategoryFullName="OpenCvSharp" LastSymbolSource="OpenCvSharp.dll">
+                <Choice Kind="TypeFlag" Name="LoadMode" />
+                <AssemblyReference ID="OpenCvSharp" />
+                <FullNameCategoryReference ID="OpenCvSharp" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="U3w0zOgscJCPocpipB7Zgh" SlotId="Np32e6NmrHROBwBbgtr6ZW" Bounds="394,59,152,116" ShowValueBox="true" />
+            <Node Bounds="291,1228,157,22" Id="FjiI6qLyCP9LLvqsl2LRRU">
+              <p:NodeReference LastCategoryFullName="OpenCvSharp.CPlusPlus.Window" LastSymbolSource="OpenCvSharp.CPlusPlus.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="Window" />
+                <Choice Kind="OperationCallFlag" Name="Create" />
+                <AssemblyReference ID="OpenCvSharp.CPlusPlus" />
+                <PinReference Kind="InputPin" Name="Name" />
+                <PinReference Kind="InputPin" Name="Flags" />
+                <PinReference Kind="InputPin" Name="Image" />
+              </p:NodeReference>
+              <Pin Id="CzcXInqnT9zLVd6xvQTqQc" Name="Output" Kind="OutputPin" />
+              <Pin Id="HSuzdVMVa0JMgnnauHksMx" Name="Name" Kind="InputPin" />
+              <Pin Id="CkfQ1MPdBnDNmkhFSO5jGe" Name="Flags" Kind="InputPin" />
+              <Pin Id="GyTa9UBegxNMioMSqteWdO" Name="Image" Kind="InputPin" />
+            </Node>
+            <Pad Id="VkILfNPlMPUNNOtdICOBgK" SlotId="Np32e6NmrHROBwBbgtr6ZW" Bounds="471,1204">
+              <p:ValueBoxSettings />
+            </Pad>
+            <Node Bounds="294,1282,180,22" Id="C8hCttiTfO8MvmX2xSzPz0">
+              <p:NodeReference LastCategoryFullName="OpenCvSharp.CPlusPlus.Window" LastSymbolSource="OpenCvSharp.CPlusPlus.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="Window" />
+                <Choice Kind="OperationCallFlag" Name="ShowImage" />
+                <AssemblyReference ID="OpenCvSharp.CPlusPlus" />
+              </p:NodeReference>
+              <Pin Id="Jms2EZgzSoEQIoNjJuXape" Name="Input" Kind="StateInputPin" />
+              <Pin Id="C043HMSMMO5PwlE6trwTX2" Name="Img" Kind="InputPin" />
+              <Pin Id="DqAzHLDFC7SPvcBp4R7XCj" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <Pad Id="BE56u8q7JFrOOeKOpI9EDf" Bounds="157,1265">
+              <p:ValueBoxSettings />
+            </Pad>
+            <ControlPoint Id="S7eoaS5raJ0PSWgZRokpMr" Bounds="364,1144" />
+            <ControlPoint Id="PYrlXKnpeXROuWkNzHLiJq" Bounds="-98,118" />
+            <ControlPoint Id="R6zrg4t9ITjQQS3CVClEsR" Bounds="-101,566" />
+            <ControlPoint Id="CxzEcN7i2zROsRm7EqzfWD" Bounds="366,114" />
+            <ControlPoint Id="OOmja4IwtbKLV0uXlIwKsm" Bounds="281,480" />
+            <ControlPoint Id="PoplN4Q1RUXNI3f4yDRqMV" Bounds="-43,609" />
+          </Canvas>
+          <ProcessDefinition Id="FHNLl8GWgcVOJzRkkPI83E">
+            <Fragment Id="MRFnVwHDf0WOO7H3jKbCxI" Patch="ESJZDDS0I02LAWDOx9RJVV" Enabled="true" />
+            <Fragment Id="PulIQZQ5YLtPp6C2yvbTNE" Patch="OkqGvJfa3PDOppp4PFQghD" Enabled="true" />
+          </ProcessDefinition>
+          <Link Id="E3LubMGrtumOJ6rQk2RvS8" Ids="H9NeAvgBcDDL9eN82yo3HX,DVsFZPZb3HhOCtJb0HA20L" />
+          <Link Id="Q6CzMRn8Y1aNkZor5pAnL5" Ids="ESw59JsBDQGM6isAxfyjQe,RTMFaa51xkcMG5a6U1qqfv" />
+          <Link Id="LrADuyd2x8VLOpjYFyGfYS" Ids="U60Uv0QsWMgN4rc8Tnp89F,IxeCBYqJZukMnXddpuP4BR" />
+          <Link Id="FYoXfwVYfQWQci4abeYUE5" Ids="CKatUdLv9h6LtaL6qR5Gj8,QADJd5DoY3CNkrd5AGf53k" />
+          <Link Id="DpBWzyxFGHTNuhMGOl0dsw" Ids="PqTbxeOCogXMME1PhEVbw7,UFFTF6ZJM7HM2oalcoq8RC" />
+          <Link Id="C7fjQudcsxRPlL8V6zIalF" Ids="MasfUgtiGlBQFqiEmEqX85,QkI8O76wia3Pbiwh71YDdA" />
+          <Link Id="PGYJ9YbiDHvP8j4ycbDR01" Ids="RzZSrhpSiZWM9EgBvv9vLn,VROaeGXQw5QN420ap21Jvk" />
+          <Link Id="AwptvSU9O4tQKzFeZ8eXUi" Ids="RzZSrhpSiZWM9EgBvv9vLn,AVyaQyxd1CMOg8uPmsSO47" />
+          <Link Id="QPJOOMNH05VOas2c3l8cnX" Ids="QNwDEEvmYhkN3RIWwIeVBT,P12NKAP35dhMiVkSeXPwXX" />
+          <Link Id="LdrCFbo34b5LnaZNPEeooZ" Ids="G6B04NifVWYNRmUza1RwA5,VeQsDdmmHcSNek3kbbQyrk" />
+          <Link Id="Tw21eTVNpddLNCgF4wmcX3" Ids="LeXP9SxfAsKOUptECp8RgE,AIVkD93XNFAMYaJ28HBhBn" />
+          <Link Id="IZeDV7lUwe1Mv4RzJUfxn1" Ids="OUx0Os8Ee6iLMwytLdF5RX,GvVe8pkmhgXLehHGjXsdCU" />
+          <Link Id="Be6qCZYdyjJO3MC51ffQG7" Ids="ESw59JsBDQGM6isAxfyjQe,ItL3OSwB3brOJlGsPkMSRE" />
+          <Link Id="JKSqwlsDvWyNmqfyKC9jGZ" Ids="BiodLKFX2w7NmoB7Aqnxip,VO4BCtQcNOzOOIJ8wmVbC7" />
+          <Link Id="EKgZmqyMmh1OUfQrsqRCD5" Ids="BiodLKFX2w7NmoB7Aqnxip,KTjwfxBgIB9Nf06NeoXwXh" />
+          <Link Id="UmdC2VYHJMUQQbXLryeGQy" Ids="HQ5YwZGbanHMCGzT0CypLi,I36mdwrL5T4OSfkIHrmZeg,VdPwi6I50CJOaDkA5T9Obd" />
+          <Link Id="HCecxAOZDLzPI7j2jvbYhm" Ids="DjpHZ35KMg4Pkvsts5rYce,Ss2GGwb9VwEMW5kHCUn0ps,UEMmjLdn3nINwWd0aAou0H" />
+          <Link Id="SSRmOgKxLzvNwZ9IA4suMw" Ids="EAS2yPVjpkMQKW5Bb2I0q0,Qwi47q5EqPOOVu2blvndhh" IsFeedback="true" />
+          <Link Id="UWoDlfE2XjEOIrUpjU3IWP" Ids="EAS2yPVjpkMQKW5Bb2I0q0,UQKFGMuKKphPtg0yqymLew" />
+          <Link Id="HCQZ4s9qpVUPdf1TuuogNb" Ids="Fx1LIlNzvakP7HRddHn0Hf,Qwi47q5EqPOOVu2blvndhh" />
+          <Link Id="RMCnwwLG5vEM9L876HuZDe" Ids="AoQHzDBbEhhO7ZzVu2eJPU,CSH0KkkIewrMbLbXJtIONA" />
+          <Link Id="Hs52rx62mhfLqcizHFxjxq" Ids="HU58jmT19DKNeE2dQuz5Ag,PoplN4Q1RUXNI3f4yDRqMV,R6zrg4t9ITjQQS3CVClEsR,PYrlXKnpeXROuWkNzHLiJq,CxzEcN7i2zROsRm7EqzfWD,LbzFVDW7LqCLjMCaIXuNbX" />
+          <Link Id="O9cjDVu8ZBLPC5X42uLrt4" Ids="CJHN9UBTPWHPL6xvjuNlci,B2G7RMndaAQOOGz14GdhGn" />
+          <Link Id="K5Da1ptOWetOvoAFnxdvog" Ids="Ce2fr2n83efPFTRkbUoKJI,SGZvnsAnr6IPwQXenvuLhf" />
+          <Link Id="TUNQF4AFF2JLvzF0B3YMlS" Ids="CKCEeUZ5yHJQbCoV7LeeFF,Kkz4xx7TnzWP1jfU6WCvcG" IsFeedback="true" />
+          <Link Id="G9pxWwlHqSzPdnzFtYvXVA" Ids="AKcIru3GwNdLA5APnQhWvE,AglwDJyBqYWM1cGy27GJMK" />
+          <Link Id="HqYnyTKbsRRPn2pPmyNNzw" Ids="GTzxwWIs9F2QdRQYqf8IYO,PFRE3SLBRUCOp11JhmTKG4" />
+          <Link Id="Usa5TUMFUv4MeUFvfp7MFL" Ids="BCQy9xPBcYHQceLBIrHYJR,VnvyHEVgvlHMSzw70gDbEJ" />
+          <Slot Id="Np32e6NmrHROBwBbgtr6ZW" Name="img" />
+          <Link Id="Qyjp7rBVtJcP20JFbn0mAG" Ids="T2j3VTKDjDhPRKuRZ5PAQ7,I3a9pkoguPqL2Q77GCDz7d" />
+          <Link Id="IgIJEAnUbvwQW8m0GDyf4x" Ids="PrUH1ALLPpEOWQYfG6NU4x,IuugMJrV3jIMYQ6tzGmvT5" />
+          <Link Id="BAj5d1lPBJYPRzo8HOchGT" Ids="ODG0Kvwg9TSMqnyhOW09Qn,Ht0dimGiFn4Magal3BdVTB" />
+          <Link Id="B1QT0DW8u1SQcSwpVjjSo4" Ids="HYGY1chvVTEPf9W8mYRaNx,Bv3ZAo1uhJ8Nxqj9HeknIX" />
+          <Link Id="QsBiGBbOTzHNiKoN9CmleO" Ids="Teda6AUNcB8LiCga1lBeIk,Ci8zz6sUo76NeOylZ76my0" />
+          <Link Id="D63ZanvSxUnN2Cr4Xv0AIM" Ids="FzzHNoTDtPTPtmndhJNby3,ChXI3BxbkkqNUUVzJoCFod" />
+          <Link Id="MKfURDYwnPiM9ubesrBJPe" Ids="R6VzumxOgQOOR3vSxrV62v,AC5A2b3deNGMAXZRWz91Vh" />
+          <Link Id="H2Fv4DhMh5rQbCDNqVG0Vg" Ids="JvdIJwWQO5ePuHvodkWhbK,PrUH1ALLPpEOWQYfG6NU4x" />
+          <Link Id="FfagjLZbYkfNAjwOmQ0qlP" Ids="N2p3hWriVy1Mp1xHPxhedN,EAS2yPVjpkMQKW5Bb2I0q0" />
+          <Link Id="VorEhXY6mGqLuNOgph037W" Ids="TFhT1nizF00NB25j9ZKbi9,H9NeAvgBcDDL9eN82yo3HX" />
+          <Link Id="FIOSFa8mjyTPW1nXZJQpxQ" Ids="Qwi47q5EqPOOVu2blvndhh,Kkz4xx7TnzWP1jfU6WCvcG" />
+          <Link Id="LNipFdIzA2yM15VW3a8xnS" Ids="JGBcubdYvBXLCNhSJgtWe7,HSuzdVMVa0JMgnnauHksMx" />
+          <Link Id="U5bKC7XshjcMQcHH48P19X" Ids="U3w0zOgscJCPocpipB7Zgh,CKCEeUZ5yHJQbCoV7LeeFF" />
+          <Link Id="FghTXs2toD8POy79nvNaHn" Ids="VkILfNPlMPUNNOtdICOBgK,GyTa9UBegxNMioMSqteWdO" />
+          <Link Id="MLSBKVQUqs7NIOufMZmdY3" Ids="Kkz4xx7TnzWP1jfU6WCvcG,VkILfNPlMPUNNOtdICOBgK" />
+          <Link Id="KyDyTgNxf9EPyDC7ZKOZJq" Ids="CzcXInqnT9zLVd6xvQTqQc,BE56u8q7JFrOOeKOpI9EDf" />
+          <Link Id="Rt0Y7cqKFGsMd95YxSWJBR" Ids="BE56u8q7JFrOOeKOpI9EDf,Jms2EZgzSoEQIoNjJuXape" />
+          <Link Id="EbvWrgQKfR9OYu4ZW2Tiib" Ids="SFpgmdHw5npP6ViydNnMtT,S7eoaS5raJ0PSWgZRokpMr,CkfQ1MPdBnDNmkhFSO5jGe" />
+          <Link Id="LmpTZ9PrMODOfzMDI2b0zN" Ids="VkILfNPlMPUNNOtdICOBgK,C043HMSMMO5PwlE6trwTX2" />
+          <Link Id="U2vZIpGMyZMMQxJDmMuJB3" Ids="EhP6tRJBSBfL40nprSCQyW,U3w0zOgscJCPocpipB7Zgh" />
+          <Link Id="GZBX9o00QTSPPNkvwm7tsX" Ids="OOmja4IwtbKLV0uXlIwKsm,Gyh3HA1b9jpLbxChLsa7i9" />
+          <Link Id="FajPSeHtClANbVhsh2Dn0p" Ids="C2VoBq1DvBQPlZy2aMLQGU,OOmja4IwtbKLV0uXlIwKsm" IsHidden="true" />
+          <Link Id="Gftykvm7RSCPBzbrea3s7Z" Ids="ImgD3tCPZjjNEyaTZUXgD0,OBSShXiMeTSNxWuI7tBcRj" />
+          <Link Id="TxHjASrTbWrPIDhTN0Q8xQ" Ids="TEXeyLHwRIKOE77wfXf0mr,N8hqVEUH1TWL1OfKNgXcaU" />
+          <Link Id="J7LCIgc5DyqOh9JBFZDvmz" Ids="UjjpFQ5fde8NNKkP0NBztH,Sw6K3pge3oKPZ791htLnQe" />
+          <Link Id="H0WhoshZwVsP6DWRQw58Zz" Ids="UH0GKQWBAekOZlNRYy27Md,Nqbgtq75HmLQdDkdA3Bnx9" />
+          <Link Id="SgtdJxwA4gHQGOYtHpwHpc" Ids="CKCEeUZ5yHJQbCoV7LeeFF,N5Ntb0H0TJ4MN9vE2t7x20" />
+          <Link Id="CwS48dV9l1YOcnQVUsPaki" Ids="Tur9XZ6gNmhL8KwJyyBDMZ,Q3bd7LAVyNpMXSynA5atT2" />
+        </Patch>
+      </Node>
+    </Canvas>
+  </Patch>
+  <PlatformDependency Id="TZQpreo1cSePrNcIKgEvC9" Location="..\..\..\_dev\OpenCvSharp-2.4.10-x86-20170126\OpenCvSharp.Blob.dll" />
+  <PlatformDependency Id="VbkJZuPfyfLN3pInfnVT9q" Location="..\..\..\_dev\OpenCvSharp-2.4.10-x86-20170126\OpenCvSharp.CPlusPlus.dll" />
+  <PlatformDependency Id="E2EUDDc1jiPMTGCIEAgh2e" Location="..\..\..\_dev\OpenCvSharp-2.4.10-x86-20170126\OpenCvSharp.dll" />
+  <PlatformDependency Id="R1EKlsVQn2AOeeQxoqAIIi" Location="..\..\..\_dev\OpenCvSharp-2.4.10-x86-20170126\OpenCvSharp.Extensions.dll" />
+  <PlatformDependency Id="S7pA5G2iy4lQBFOW9WJFyG" Location="..\..\..\_dev\OpenCvSharp-2.4.10-x86-20170126\OpenCvSharp.UserInterface.dll" />
+  <PlatformDependency Id="HiFaAVNkeb8Oj6lOJoWx9z" Location="..\..\..\_dev\OpenCvSharp-2.4.10-x86-20170126\OpenCvSharpExtern.dll" />
+</Document>
