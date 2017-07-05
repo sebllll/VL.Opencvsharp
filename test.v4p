@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.8.dtd" >
    <PATCH nodename="C:\vvvv\VL.OpenCVSharp\test.v4p" systemname="test" filename="C:\vvvv\VL.OpenCVSharp\test.v4p" scrollx="45" scrolly="0">
-   <BOUNDS type="Window" left="13215" top="375" width="3390" height="6000">
+   <BOUNDS type="Window" left="12030" top="540" width="3315" height="6000">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
@@ -19,7 +19,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="540" top="1455" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1000">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="60">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -121,7 +121,7 @@
    </PIN>
    <PIN pinname="Minimum" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Maximum" slicecount="1" values="1000">
+   <PIN pinname="Maximum" slicecount="1" values="60">
    </PIN>
    <PIN pinname="Columns" slicecount="1" values="120">
    </PIN>
@@ -192,7 +192,7 @@
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE id="94" systemname="TestNode (OpenCVSharp)" filename="vl\VVVV.OpenCVSharp.vl" nodename="TestNode (OpenCVSharp)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
+   <NODE id="95" systemname="TestNode (OpenCVSharp)" filename="vl\VVVV.OpenCVSharp.vl" nodename="TestNode (OpenCVSharp)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <BOUNDS type="Node" left="930" top="1035" width="1020" height="270">
    </BOUNDS>
    <BOUNDS type="Box" left="930" top="1035" width="2400" height="1800">
@@ -200,10 +200,10 @@
    <BOUNDS type="Window" left="0" top="0" width="6000" height="4500">
    </BOUNDS>
    </NODE>
-   <LINK srcnodeid="63" srcpinname="Y Output Value" dstnodeid="94" dstpinname="Calc">
+   <LINK srcnodeid="63" srcpinname="Y Output Value" dstnodeid="95" dstpinname="Calc">
    </LINK>
-   <LINK srcnodeid="62" srcpinname="Y Output Value" dstnodeid="94" dstpinname="Reset">
+   <LINK srcnodeid="62" srcpinname="Y Output Value" dstnodeid="95" dstpinname="Reset">
    </LINK>
-   <LINK srcnodeid="85" srcpinname="Y Output Value" dstnodeid="94" dstpinname="Harr">
+   <LINK srcnodeid="85" srcpinname="Y Output Value" dstnodeid="95" dstpinname="Harr">
    </LINK>
    </PATCH>
