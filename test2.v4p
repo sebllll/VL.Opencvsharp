@@ -1,65 +1,29 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.8.dtd" >
-   <PATCH nodename="C:\vvvv\VL.OpenCVSharp\test2.v4p" systemname="test2" filename="C:\vvvv\VL.OpenCVSharp\test2.v4p" scrollx="60" scrolly="15">
+   <PATCH nodename="C:\vvvv\VL.OpenCVSharp\test2.v4p" systemname="test2" filename="C:\vvvv\VL.OpenCVSharp\test2.v4p" scrollx="-1800" scrolly="0">
    <BOUNDS type="Window" left="13290" top="255" width="3345" height="6000">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
    </PACK>
    <NODE systemname="MainLoop (VVVV)" nodename="MainLoop (VVVV)" componentmode="Hidden" id="-6">
-   <BOUNDS type="Node" left="540" top="2115" width="100" height="100">
+   <BOUNDS type="Node" left="570" top="2355" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Maximum Foreground FPS" visible="1" slicecount="1" values="60">
+   <PIN pinname="Maximum Foreground FPS" visible="1" slicecount="1" values="120">
    </PIN>
-   <PIN pinname="Maximum Background FPS" visible="1" slicecount="1" values="60">
+   <PIN pinname="Maximum Background FPS" visible="1" slicecount="1" values="30">
    </PIN>
-   <PIN pinname="Time Mode" visible="1" slicecount="1" values="Filtered">
+   <PIN pinname="Time Mode" visible="1" slicecount="1" values="Raw">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="21" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="540" top="1365" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="540" top="1365" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="60">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Integer">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="21" srcpinname="Y Output Value" dstnodeid="-6" dstpinname="Maximum Foreground FPS">
-   </LINK>
-   <LINK srcnodeid="21" srcpinname="Y Output Value" dstnodeid="-6" dstpinname="Maximum Background FPS">
-   </LINK>
-   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="22" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Box" left="1185" top="1755" width="1590" height="270">
-   </BOUNDS>
-   <BOUNDS type="Node" left="1185" top="1755" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Filtered">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="Raw">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="22" srcpinname="Output Enum" dstnodeid="-6" dstpinname="Time Mode">
-   </LINK>
    <NODE systemname="Timing (Debug)" nodename="Timing (Debug)" componentmode="Hidden" id="23">
-   <BOUNDS type="Node" left="540" top="2760" width="100" height="100">
+   <BOUNDS type="Node" left="540" top="2775" width="100" height="100">
    </BOUNDS>
    <PIN pinname="frames per second" visible="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="24" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="1335" top="3630" width="795" height="240">
+   <BOUNDS type="Box" left="1335" top="3645" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1335" top="3630" width="0" height="0">
+   <BOUNDS type="Node" left="1335" top="3645" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -71,7 +35,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="25">
-   <BOUNDS type="Node" left="1335" top="3210" width="100" height="100">
+   <BOUNDS type="Node" left="1335" top="3225" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Go To Position" visible="1">
    </PIN>
@@ -83,9 +47,9 @@
    <LINK srcnodeid="25" srcpinname="Position Out" dstnodeid="24" dstpinname="Y Input Value">
    </LINK>
    <NODE systemname="Queue (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Queue (Spreads)" componentmode="Hidden" id="40">
-   <BOUNDS type="Node" left="540" top="3210" width="100" height="100">
+   <BOUNDS type="Node" left="540" top="3225" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="540" top="3210" width="3000" height="3000">
+   <BOUNDS type="Box" left="540" top="3225" width="3000" height="3000">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -97,7 +61,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Reverse (Spreads)" nodename="Reverse (Spreads)" componentmode="Hidden" id="41">
-   <BOUNDS type="Node" left="540" top="3630" width="100" height="100">
+   <BOUNDS type="Node" left="540" top="3645" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -109,9 +73,9 @@
    <LINK srcnodeid="40" srcpinname="Output" dstnodeid="41" dstpinname="Input">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="42" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="525" top="4275" width="2535" height="825">
+   <BOUNDS type="Box" left="525" top="4290" width="2535" height="825">
    </BOUNDS>
-   <BOUNDS type="Node" left="525" top="4275" width="0" height="0">
+   <BOUNDS type="Node" left="525" top="4290" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -132,10 +96,10 @@
    </NODE>
    <LINK srcnodeid="41" srcpinname="Output" dstnodeid="42" dstpinname="Y Input Value">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="75">
-   <BOUNDS type="Box" left="1005" top="90" width="480" height="480">
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="96">
+   <BOUNDS type="Box" left="1980" top="345" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="1005" top="90" width="0" height="0">
+   <BOUNDS type="Node" left="1980" top="345" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
@@ -149,13 +113,11 @@
    </PIN>
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
    </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="76">
-   <BOUNDS type="Box" left="2070" top="15" width="480" height="480">
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="97">
+   <BOUNDS type="Box" left="1065" top="225" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="2070" top="15" width="0" height="0">
+   <BOUNDS type="Node" left="1065" top="225" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
@@ -165,15 +127,133 @@
    </PIN>
    <PIN pinname="Value Type" slicecount="1" values="Boolean">
    </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   <PIN pinname="Behavior" slicecount="1" values="Press">
    </PIN>
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE systemname="testor (opencvsharp)" filename="vl\VVVV.opencvsharp.testor.vl" nodename="testor (opencvsharp)" componentmode="Hidden" id="91">
-   <BOUNDS type="Node" left="1020" top="675" width="100" height="100">
+   <NODE id="75" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)" hiddenwhenlocked="0" managers="">
+   <BOUNDS type="Box" left="315" top="195" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="315" top="195" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1" pintype="Output">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" pintype="Configuration" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" pintype="Configuration" values="Bang">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" pintype="Input" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" pintype="Configuration" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" pintype="Configuration" values="4">
+   </PIN>
+   <BOUNDS type="Window" left="0" top="0" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Tag" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Pin Visibility" pintype="Configuration" slicecount="1" values="True">
+   </PIN>
+   <PIN pinname="SliceCount Mode" pintype="Configuration" slicecount="1" values="Input">
+   </PIN>
+   <PIN pinname="Columns" pintype="Configuration" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Rows" pintype="Configuration" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Pages" pintype="Configuration" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Show SliceIndex" pintype="Configuration" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Font" pintype="Configuration" slicecount="1" values="|Lucida Sans Unicode|">
+   </PIN>
+   <PIN pinname="Size" pintype="Configuration" slicecount="1" values="7">
+   </PIN>
+   <PIN pinname="Show Grid" pintype="Configuration" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Vector Size" pintype="Configuration" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Minimum" pintype="Configuration" slicecount="1" values="-99999999">
+   </PIN>
+   <PIN pinname="Maximum" pintype="Configuration" slicecount="1" values="99999999">
+   </PIN>
+   <PIN pinname="Default" pintype="Configuration" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Value" pintype="Configuration" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Show Slider" pintype="Configuration" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Slider Behavior" pintype="Configuration" slicecount="1" values="Endless">
+   </PIN>
+   <PIN pinname="Show Connections" pintype="Configuration" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Show Background" pintype="Configuration" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Sticky Slider" pintype="Configuration" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Allow MouseOffset" pintype="Configuration" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Slider Constraints" pintype="Configuration" slicecount="1" values="scX">
+   </PIN>
+   <PIN pinname="Slider Alignment" pintype="Configuration" slicecount="1" values="Grid">
+   </PIN>
+   <PIN pinname="SliceOffset" pintype="Input" visible="-1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="X Input Value" pintype="Input" visible="-1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="X Output Value" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="Changed" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   </NODE>
+   <NODE id="21" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="540" top="1380" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="540" top="1380" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="500">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="22" nodename="IOBox (Enumerations)" componentmode="InABox" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="1185" top="1770" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1185" top="1770" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Filtered">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="Raw">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="22" srcpinname="Output Enum" dstnodeid="-6" dstpinname="Time Mode">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Y Output Value" dstnodeid="-6" dstpinname="Maximum Foreground FPS">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Y Output Value" dstnodeid="-6" dstpinname="Maximum Background FPS">
+   </LINK>
+   <NODE systemname="testor (opencvsharp)" filename="vl\VVVV.opencvsharp.testor.vl" nodename="testor (opencvsharp)" componentmode="Hidden" id="100">
+   <BOUNDS type="Node" left="1110" top="975" width="100" height="100">
    </BOUNDS>
    </NODE>
-   <LINK srcnodeid="75" srcpinname="Y Output Value" dstnodeid="91" dstpinname="calc">
+   <LINK srcnodeid="96" srcpinname="Y Output Value" dstnodeid="100" dstpinname="reset">
+   </LINK>
+   <LINK srcnodeid="97" srcpinname="Y Output Value" dstnodeid="100" dstpinname="calc">
    </LINK>
    </PATCH>
