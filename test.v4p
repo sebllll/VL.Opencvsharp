@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.8.dtd" >
-   <PATCH nodename="C:\vvvv\VL.OpenCVSharp\test.v4p" systemname="test" filename="C:\vvvv\VL.OpenCVSharp\test.v4p" scrollx="45" scrolly="0">
+   <PATCH nodename="C:\vvvv\VL.OpenCVSharp\test.v4p" systemname="test" filename="C:\vvvv\VL.OpenCVSharp\test.v4p" scrollx="75" scrolly="0">
    <BOUNDS type="Window" left="13290" top="255" width="3345" height="6000">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
@@ -171,6 +171,8 @@
    </PIN>
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="85">
    <BOUNDS type="Box" left="1410" top="270" width="480" height="480">
@@ -192,7 +194,25 @@
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE id="95" systemname="TestNode (OpenCVSharp)" filename="vl\VVVV.OpenCVSharp.vl" nodename="TestNode (OpenCVSharp)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="99">
+   <BOUNDS type="Box" left="360" top="405" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="360" top="405" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE id="102" systemname="TestNode (OpenCVSharp)" filename="vl\VVVV.OpenCVSharp.vl" nodename="TestNode (OpenCVSharp)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
    <BOUNDS type="Node" left="930" top="1035" width="1020" height="270">
    </BOUNDS>
    <BOUNDS type="Box" left="930" top="1035" width="2400" height="1800">
@@ -200,10 +220,10 @@
    <BOUNDS type="Window" left="0" top="0" width="6000" height="4500">
    </BOUNDS>
    </NODE>
-   <LINK srcnodeid="63" srcpinname="Y Output Value" dstnodeid="95" dstpinname="Calc">
+   <LINK srcnodeid="62" srcpinname="Y Output Value" dstnodeid="102" dstpinname="Reset">
    </LINK>
-   <LINK srcnodeid="62" srcpinname="Y Output Value" dstnodeid="95" dstpinname="Reset">
+   <LINK srcnodeid="85" srcpinname="Y Output Value" dstnodeid="102" dstpinname="Harr">
    </LINK>
-   <LINK srcnodeid="85" srcpinname="Y Output Value" dstnodeid="95" dstpinname="Harr">
+   <LINK srcnodeid="63" srcpinname="Y Output Value" dstnodeid="102" dstpinname="Calc">
    </LINK>
    </PATCH>
