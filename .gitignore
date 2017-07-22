@@ -4,3 +4,5 @@
 
 # Dynamic plugins .dll
 bin/
+
+/OpenCvSharp-2.4.10-x86-20170126/
