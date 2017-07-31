@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.8.dtd" >
-   <PATCH nodename="C:\vvvv\VL.OpenCVSharp\test.v4p" systemname="test" filename="C:\vvvv\VL.OpenCVSharp\test.v4p" scrollx="90" scrolly="0">
+   <PATCH nodename="C:\vvvv\VL.OpenCvsharp\test.v4p" systemname="test" filename="C:\vvvv\VL.OpenCVSharp\test.v4p" scrollx="90" scrolly="0">
    <BOUNDS type="Window" left="8025" top="240" width="4215" height="6000">
    </BOUNDS>
    <PACK Name="addonpack" Version="35.0.0">
@@ -164,28 +164,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="85">
-   <BOUNDS type="Box" left="1410" top="270" width="480" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="1410" top="270" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Bang">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Harr">
-   </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="99">
    <BOUNDS type="Box" left="360" top="405" width="480" height="480">
    </BOUNDS>
@@ -224,8 +202,6 @@
    </LINK>
    <LINK srcnodeid="63" srcpinname="Y Output Value" dstnodeid="118" dstpinname="Calc">
    </LINK>
-   <LINK srcnodeid="85" srcpinname="Y Output Value" dstnodeid="118" dstpinname="Harr">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="119">
    <BOUNDS type="Box" left="2490" top="270" width="480" height="480">
    </BOUNDS>
@@ -246,4 +222,6 @@
    </NODE>
    <LINK srcnodeid="119" srcpinname="Y Output Value" dstnodeid="118" dstpinname="Save">
    </LINK>
+   <PACK Name="vvvv-ZeroMQ" Version="0.5.7">
+   </PACK>
    </PATCH>

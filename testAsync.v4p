@@ -115,7 +115,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="2340" top="1125" width="2400" height="1800">
    </BOUNDS>
-   <BOUNDS type="Window" left="0" top="16515" width="25170" height="4635">
+   <BOUNDS type="Window" left="0" top="14865" width="25170" height="1335">
    </BOUNDS>
    <PIN pinname="Log Messages" visible="1">
    </PIN>
@@ -166,10 +166,16 @@
    </LINK>
    <LINK srcnodeid="22" srcpinname="Output Enum" dstnodeid="-6" dstpinname="Time Mode">
    </LINK>
-   <NODE systemname="TestNodeAsync (OpenCVSharp)" filename="vl\VVVV.OpenCVSharp.vl" nodename="TestNodeAsync (OpenCVSharp)" componentmode="Hidden" id="140" debug="0">
+   <PACK Name="vvvv-ZeroMQ" Version="0.5.7">
+   </PACK>
+   <NODE id="144" systemname="TestNodeAsync (OpenCVSharp)" filename="vl\VVVV.OpenCVSharp.vl" nodename="TestNodeAsync (OpenCVSharp)" componentmode="Hidden" debug="0" hiddenwhenlocked="0" managers="">
    <BOUNDS type="Node" left="450" top="1095" width="100" height="100">
    </BOUNDS>
+   <BOUNDS type="Box" left="0" top="0" width="2400" height="1800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="0" top="0" width="6000" height="4500">
+   </BOUNDS>
    </NODE>
-   <LINK srcnodeid="128" srcpinname="Y Output Value" dstnodeid="140" dstpinname="Reset">
+   <LINK srcnodeid="128" srcpinname="Y Output Value" dstnodeid="144" dstpinname="Reset">
    </LINK>
    </PATCH>
